@@ -12,18 +12,13 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 	int T;
-	cin >> T;
+	cin>>T;
 	while (T--)
 	{
-		int sum = 0;
-		int n;
-		cin >> n;
-		while (n > 0)
-		{
-			sum += (n % 10);
-			n /= 10;
-		}
-		cout << sum << nl;
+		int x;cin>>x;
+		if(1<=x&& x<100) cout<<"Easy"<<nl;
+		if(100<=x&& x<200) cout<<"Medium"<<nl;
+		if(200<=x&& x<=300) cout<<"Hard"<<nl;
 	}
 	return 0;
 }

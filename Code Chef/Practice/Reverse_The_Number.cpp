@@ -1,21 +1,27 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-
+typedef unsigned long long ull;
+typedef long long int ll;
+typedef long double ld;
+#define mp make_pair
+#define pb push_back
+#define nl '\n'
 int main()
 {
-	int t, n, rem;
-	cin >> t;
-	while (t--)
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	int T;
+	cin>>T;
+	while (T--)
 	{
-		cin >> n;
-		int rev_num = 0;
-		while (n != 0)
-		{
-			rem = n % 10;
-			rev_num = (rev_num * 10) + rem;
-			n /= 10;
+		int n;cin>>n;
+		int rev_n=0;
+		while(n>0){
+			rev_n=(rev_n*10)+(n%10);
+			n/=10;
 		}
-		cout << rev_num << endl;
+		cout<<rev_n<<nl;
 	}
 	return 0;
 }

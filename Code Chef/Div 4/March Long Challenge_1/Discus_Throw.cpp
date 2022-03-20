@@ -15,15 +15,9 @@ int main()
 	cin >> T;
 	while (T--)
 	{
-		int sum = 0;
-		int n;
-		cin >> n;
-		while (n > 0)
-		{
-			sum += (n % 10);
-			n /= 10;
-		}
-		cout << sum << nl;
+		int a, b, c;
+		cin >> a >> b >> c;
+		cout <<max({a,b,c}) << nl;
 	}
 	return 0;
 }

@@ -12,18 +12,12 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 	int T;
-	cin >> T;
+	cin>>T;
 	while (T--)
 	{
-		int sum = 0;
 		int n;
-		cin >> n;
-		while (n > 0)
-		{
-			sum += (n % 10);
-			n /= 10;
-		}
-		cout << sum << nl;
+		cin>>n;
+		cout<<((1+n)/2)<<nl;
 	}
 	return 0;
 }

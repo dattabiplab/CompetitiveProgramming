@@ -11,19 +11,26 @@ int main()
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);
-	string s;
-	cin >> s;
-	transform(s.begin(), s.end(), s.begin(), ::tolower);
-	for (int i = 0; i < s.length(); ++i)
+	int T;
+	cin >> T;
+	while (T--)
 	{
-		if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u' ||s[i]=='y')
+		string s, t, m;
+		cin >> s;
+		cin >> t;
+		for (int i = 0; i < 5; i++)
 		{
-			continue;
+			if (s[i] == t[i])
+			{
+				m[i] = 'G';
+			}
+			else
+			{
+				m[i] = 'B';
+			}
+			cout << m[i];
 		}
-		else
-		{
-			cout << "." << s[i];
-		}
+		cout << nl;
 	}
 	return 0;
 }

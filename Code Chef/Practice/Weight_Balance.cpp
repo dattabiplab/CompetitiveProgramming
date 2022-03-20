@@ -12,18 +12,13 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 	int T;
-	cin >> T;
+	cin>>T;
 	while (T--)
 	{
-		int sum = 0;
-		int n;
-		cin >> n;
-		while (n > 0)
-		{
-			sum += (n % 10);
-			n /= 10;
-		}
-		cout << sum << nl;
+		int w1,w2,x1,x2,m;cin>>w1>>w2>>x1>>x2>>m;
+		int incWt=w2-w1;
+		if(x1*m<=incWt && incWt<=x2*m) cout<<"1"<<nl;
+		else cout<<"0"<<nl;
 	}
 	return 0;
 }

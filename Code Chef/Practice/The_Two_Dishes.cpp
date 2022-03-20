@@ -15,14 +15,9 @@ int main()
 	cin>>T;
 	while (T--)
 	{
-		int n;
-		int arr[n];
-		for(int i=0;i<n;i++){
-			cin>>arr[i];
-			arr[i]=abs(arr[i]);
-		}
-		sum
-
+		int n,s;cin>>n>>s;
+		if(n>=s) cout<<s<<nl;
+		else cout<<n-(s-n)<<nl;
 	}
 	return 0;
 }

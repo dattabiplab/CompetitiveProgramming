@@ -12,18 +12,16 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 	int T;
-	cin >> T;
+	cin>>T;
 	while (T--)
 	{
-		int sum = 0;
-		int n;
-		cin >> n;
-		while (n > 0)
-		{
-			sum += (n % 10);
-			n /= 10;
-		}
-		cout << sum << nl;
+		char ch;
+		cin>>ch;
+		ch= tolower(ch);
+		if(ch=='b') cout<<"BattleShip"<<nl;
+		else if(ch=='c') cout<<"Cruiser"<<nl;
+		else if(ch=='d') cout<<"Destroyer"<<nl;
+		else if(ch=='f') cout<<"Frigate"<<nl;
 	}
 	return 0;
 }

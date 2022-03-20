@@ -11,19 +11,17 @@ int main()
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);
-	int T;
-	cin >> T;
-	while (T--)
+	int x;
+	float bal;
+	cin >> x>>bal;
+	cout<<fixed<<showpoint<<setprecision(2);
+	if ((x <= bal-0.5) && (x % 5 == 0))
 	{
-		int sum = 0;
-		int n;
-		cin >> n;
-		while (n > 0)
-		{
-			sum += (n % 10);
-			n /= 10;
-		}
-		cout << sum << nl;
+		cout<<(bal-x-0.50)<<nl;
+	}
+	else
+	{
+		cout<<bal<<nl;
 	}
 	return 0;
 }

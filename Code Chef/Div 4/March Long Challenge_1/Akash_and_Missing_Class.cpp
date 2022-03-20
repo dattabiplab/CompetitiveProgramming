@@ -15,15 +15,18 @@ int main()
 	cin >> T;
 	while (T--)
 	{
-		int sum = 0;
-		int n;
+		ll n;
 		cin >> n;
-		while (n > 0)
+		ll ans = n / 7;
+		ll rem = n % 7;
+		if (rem == 6)
 		{
-			sum += (n % 10);
-			n /= 10;
+			cout << ans + 1 << nl;
 		}
-		cout << sum << nl;
+		else
+		{
+			cout << ans << nl;
+		}
 	}
 	return 0;
 }

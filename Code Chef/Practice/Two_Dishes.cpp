@@ -15,15 +15,14 @@ int main()
 	cin >> T;
 	while (T--)
 	{
-		int sum = 0;
-		int n;
-		cin >> n;
-		while (n > 0)
-		{
-			sum += (n % 10);
-			n /= 10;
-		}
-		cout << sum << nl;
+		int n, a, b, c;
+		cin >> n >> a >> b >> c;
+		int A = min(a, b);
+		int B = b - min(a, b);
+		int C = min(B, c);
+		if (A + C >= n)
+			cout << "YES" << nl;
+		if(A+C<n) cout<<"NO"<<nl;
 	}
 	return 0;
 }

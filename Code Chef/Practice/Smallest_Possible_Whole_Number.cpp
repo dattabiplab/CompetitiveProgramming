@@ -6,6 +6,8 @@ typedef long double ld;
 #define mp make_pair
 #define pb push_back
 #define nl '\n'
+const int M=1e9+7;
+ll n, k;
 int main()
 {
 	ios_base::sync_with_stdio(false);
@@ -15,15 +17,9 @@ int main()
 	cin >> T;
 	while (T--)
 	{
-		int sum = 0;
-		int n;
-		cin >> n;
-		while (n > 0)
-		{
-			sum += (n % 10);
-			n /= 10;
-		}
-		cout << sum << nl;
+		cin >> n >> k;
+		if(k==0) cout<<n<<nl;
+		else cout<<n%k<<nl;
 	}
 	return 0;
 }

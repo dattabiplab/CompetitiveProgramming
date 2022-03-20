@@ -12,18 +12,15 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 	int T;
-	cin >> T;
+	cin>>T;
 	while (T--)
 	{
-		int sum = 0;
-		int n;
-		cin >> n;
-		while (n > 0)
-		{
-			sum += (n % 10);
-			n /= 10;
-		}
-		cout << sum << nl;
+		int u, v, a, s;
+		cin >> u >> v >> a >> s;
+		int V=v*v;
+		int V1=(u*u)-(2*a*s);
+		if(V>=V1) cout<<"Yes"<<nl;
+		else cout<<"No"<<nl;
 	}
 	return 0;
 }

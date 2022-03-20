@@ -12,18 +12,13 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 	int T;
-	cin >> T;
+	cin>>T;
 	while (T--)
 	{
-		int sum = 0;
-		int n;
-		cin >> n;
-		while (n > 0)
-		{
-			sum += (n % 10);
-			n /= 10;
-		}
-		cout << sum << nl;
+		int d,l,r; cin>>d>>l>>r;
+		if(d>=l && d<=r) cout<<"Take second dose now"<<nl;
+		else if(d>l && r<d) cout<<"Too Late"<<nl;
+		else cout<<"Too Early"<<nl;
 	}
 	return 0;
 }

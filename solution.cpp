@@ -1,55 +1,29 @@
 #include <iostream>
 using namespace std;
 
+int isPrime(int n){
+	if (n==1) return false;
+	if(n==2 ||n==3) return n;
+	if(n%2==0 || n%3==0) return false;
+	for (int i=5; i*i<=n;i+=6){
+		if(n%i==0 || n%(i+2)==0) return n;
+	}
+	return true;
+}
+
+int primeFactors(int n){
+	for(int i=2;i<n;i++){
+		if(isPrime(i)){
+			int x=i;
+			while(n%x==0){
+				cout<<i<<endl;
+				x*=i;
+			}
+		}
+	}
+}
 int main()
 {
-    string s;
-    cin >> s;
-    int cnt1 = 0, cnt2 = 0, cnt3 = 0;
-    int l = s.length();
-    for (int i = 0; i < l; i += 2)
-    {
-        if (s[i] == '1')
-        {
-            cnt1++;
-        }
-        else if (s[i] == '2')
-        {
-            cnt2++;
-        }
-        else
-        {
-            cnt3++;
-        }
-    }
-
-    int a = 1;
-    for (int i = 0; i < l; i++)
-    {
-
-        if (i % 2 == 1)
-        {
-            cout << '+';
-        }
-        else
-        {
-            if (a <= cnt1)
-            {
-                cout << 1;
-                a++;
-            }
-            else if (a > cnt1 && a <= cnt1 + cnt2)
-            {
-                cout << 2;
-                a++;
-            }
-            else if (a > cnt1 + cnt2 && a <= cnt1 + cnt2 + cnt3)
-            {
-                cout << 3;
-                a++;
-            }
-        }
-    }
-    cout << "\n";
+	cout<<primeFactors(27);   
     return 0;
 }

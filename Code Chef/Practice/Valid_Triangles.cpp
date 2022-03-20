@@ -12,18 +12,17 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 	int T;
-	cin >> T;
+	cin>>T;
 	while (T--)
 	{
-		int sum = 0;
-		int n;
-		cin >> n;
-		while (n > 0)
-		{
-			sum += (n % 10);
-			n /= 10;
+		int a,b,c;
+		cin>>a>>b>>c;
+		if(a+b+c==180){
+			cout<<"YES"<<nl;
 		}
-		cout << sum << nl;
+		else{
+			cout<<"NO"<<nl;
+		}
 	}
 	return 0;
 }

@@ -12,18 +12,14 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 	int T;
-	cin >> T;
+	cin>>T;
 	while (T--)
 	{
-		int sum = 0;
-		int n;
-		cin >> n;
-		while (n > 0)
-		{
-			sum += (n % 10);
-			n /= 10;
-		}
-		cout << sum << nl;
+		int a[3][2];
+		for(int i=0;i<3;i++) cin>>a[i][0]>>a[i][1];
+		if((a[0][0]==a[1][0] ||a[0][0]==a[1][1])&&(a[0][1]==a[1][0] ||a[0][1]==a[1][1])) cout<<"1"<<nl;
+		else if((a[0][0]==a[2][0] ||a[0][0]==a[2][1])&&(a[0][1]==a[2][0] ||a[0][1]==a[2][1])) cout<<"2"<<nl;
+		else cout<<"0"<<nl;
 	}
 	return 0;
 }

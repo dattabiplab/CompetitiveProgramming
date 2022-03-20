@@ -12,22 +12,13 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 	int T;
-	cin >> T;
+	cin>>T;
 	while (T--)
 	{
-		int x, y;
-		cin >> x >> y;
-		if (y != 0)
-		{
-			if (y % 2 == 0)
-			{
-				cout << "Janmansh" << nl;
-			}
-			else if (y % 2 != 0)
-			{
-				cout << "Jay" << nl;
-			}
-		}
+		float s,a,b,c;cin>>s>>a>>b>>c;
+		float s1=s+(0.01*s*c);
+		if(a<=s1 && s1<=b) cout<<"Yes"<<nl;
+		else cout<<"No"<<nl;
 	}
 	return 0;
 }

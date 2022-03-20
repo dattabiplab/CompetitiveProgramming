@@ -11,19 +11,18 @@ int main()
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);
-	int T;
-	cin >> T;
-	while (T--)
+	int n, k;
+	cin >> n>>k;
+	int counter = 0;
+	for (int i = 0; i < n; i++)
 	{
-		int sum = 0;
-		int n;
-		cin >> n;
-		while (n > 0)
+		ll t;
+		cin >> t;
+		if (t % k == 0)
 		{
-			sum += (n % 10);
-			n /= 10;
+			counter++;
 		}
-		cout << sum << nl;
 	}
+	cout << counter;
 	return 0;
 }
