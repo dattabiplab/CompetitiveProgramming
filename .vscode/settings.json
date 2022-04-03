@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "cassert": "cpp",
+    "climits": "cpp",
+    "cmath": "cpp",
+    "algorithm": "cpp",
+    "bitset": "cpp",
+    "utility": "cpp",
+    "iostream": "cpp"
+  }
+}
