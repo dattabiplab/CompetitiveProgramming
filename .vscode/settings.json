@@ -6,6 +6,9 @@
     "algorithm": "cpp",
     "bitset": "cpp",
     "utility": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "vector": "cpp",
+    "unordered_set": "cpp",
+    "random": "cpp"
   }
 }
