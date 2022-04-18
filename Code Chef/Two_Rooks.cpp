@@ -20,18 +20,9 @@ int main()
 	cin>>T;
 	while (T--)
 	{
-		i(a,b,c,d)
-		ll nit=0;ll sobh=0;
-		if(min(a,b)==a) nit=a+c;
-		if(min(nit,b)==b) sobh=b+d;
-		else if(min(nit,b)==a) nit=nit+d;
-		if(min(a,b)==b) sobh=b+c;
-		if(min(sobh,b)==b) nit=a+d;
-		else if(min(sobh,b)==a) sobh=sobh+d;
-		//cout<<nit<<" "<<sobh<<" ";
-		if(sobh<=nit) cout<<"N"<<nl;
-		if(sobh>nit) cout<<"S"<<nl;
-		//nit=0;sobh=0;
+		i(x1,y1,x2,y2)
+		if(x1==x2 || y1==y2) cout<<"YES"<<nl;
+		else cout<<"NO"<<nl;
 	}
 	return 0;
 }

@@ -1,1 +1,0 @@
-I have stopped making separated folders for each questions. Now I put all solutions in Practice Folder.

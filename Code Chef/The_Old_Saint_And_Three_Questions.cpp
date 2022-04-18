@@ -9,7 +9,7 @@ typedef long double ld;
 #define f(n) for(int i=0;i<n;i++)
 #define in(n,a) for(int i=0;i<n;i++) cin>>a[i];
 #define vec vector<ll> v
-#define i(a,b,c,d) ll a,b,c,d; cin>>a>>b>>c>>d;
+#define i(a,b,c) ll a,b,c; cin>>a>>b>>c;
 #define nl '\n'
 int main()
 {
@@ -20,18 +20,10 @@ int main()
 	cin>>T;
 	while (T--)
 	{
-		i(a,b,c,d)
-		ll nit=0;ll sobh=0;
-		if(min(a,b)==a) nit=a+c;
-		if(min(nit,b)==b) sobh=b+d;
-		else if(min(nit,b)==a) nit=nit+d;
-		if(min(a,b)==b) sobh=b+c;
-		if(min(sobh,b)==b) nit=a+d;
-		else if(min(sobh,b)==a) sobh=sobh+d;
-		//cout<<nit<<" "<<sobh<<" ";
-		if(sobh<=nit) cout<<"N"<<nl;
-		if(sobh>nit) cout<<"S"<<nl;
-		//nit=0;sobh=0;
+		i(a1,a2,a3)
+		i(b1,b2,b3)
+		if((a1+a2+a3)==(b1+b2+b3)) cout<<"Pass"<<nl;
+		else cout<<"Fail"<<nl;
 	}
 	return 0;
 }
