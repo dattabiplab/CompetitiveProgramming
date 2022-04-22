@@ -9,7 +9,7 @@ typedef long double ld;
 #define f(n) for(int i=0;i<n;i++)
 #define in(n,a) for(int i=0;i<n;i++) cin>>a[i];
 #define vec vector<ll> v
-#define i(a,b,c,d,e) ll a,b,c,d,e; cin>>a>>b>>c>>d>>e;
+#define i(a,b,c) ll a,b,c; cin>>a>>b>>c;
 #define nl '\n'
 int main()
 {
@@ -20,14 +20,14 @@ int main()
 	cin>>T;
 	while (T--)
 	{
-		i(x1,x2,x3,v1,v2)
-		if(abs(x1-x3)==abs(x2-x3)){
-			if(v1<v2) cout<<"Kefa"<<nl;
-			if(v1>v2) cout<<"Chef"<<nl;
-			if(v1==v2) cout<<"Draw"<<nl;
+		int n,x;cin>>n>>x;
+		if(n==x) cout<<"YES"<<nl;
+		else if(n<x)
+		{
+			if(x%n==0) cout<<"YES"<<nl;
+			else cout<<"NO"<<nl;
 		}
-		else if(abs(x1-x3)<abs(x2-x3)) cout<<"Chef"<<nl;
-		else if(abs(x1-x3)>abs(x2-x3)) cout<<"Kefa"<<nl;
+		else if(n>x) cout<<"NO"<<nl;
 	}
 	return 0;
 }

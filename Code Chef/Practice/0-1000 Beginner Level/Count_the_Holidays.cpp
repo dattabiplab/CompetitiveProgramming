@@ -20,13 +20,16 @@ int main()
 	cin>>T;
 	while (T--)
 	{
-		ll a,b;cin>>a>>b;
-		if(((a%2!=0) && (b%2==0)) || ((a%2==0) && (b%2!=0))) {
-			if(abs(a-b)==1) cout<<"YES"<<nl;
-			else cout<<"NO"<<nl;
+		int n;cin>>n;int a[n];
+		in(n,a)
+		//int totalSundays=4;
+		//int totalSaturdays=4;
+		int ans,count=0;
+		f(n){
+			if(a[i]!=6 &&a[i]!=13 && a[i]!=20 && a[i]!=27 && a[i]!=7 &&a[i]!=14 && a[i]!=21 && a[i]!=28) count++;
 		}
-		else if(((a%2==0) && (b%2==0)) || ((a%2!=0) && (b%2!=0))) cout<<"YES"<<nl;
-		else cout<<"NO"<<nl;
+		ans=8+count;
+		cout<<ans<<nl;
 	}
 	return 0;
 }

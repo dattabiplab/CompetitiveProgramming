@@ -24,22 +24,13 @@ int main()
 	cin >> T;
 	while (T--)
 	{
-		ll n, count = 0;
-		cin >> n;
-		ll a[n];
-		in(n, a)
-			f(n)
+		int d, n, ans;
+		cin >> d >> n;
+		while (d--)
 		{
-			for (int j = i + 1; j < n; j++)
-			{
-				if (i != j)
-				{
-					if (a[i] * a[j] > 0)
-						count++;
-				}
-			}
+			n = (n * (n + 1)) / 2;
 		}
-		cout << count << nl;
+		cout << n << nl;
 	}
 	return 0;
 }

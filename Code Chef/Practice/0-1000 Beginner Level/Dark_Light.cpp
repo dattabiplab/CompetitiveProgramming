@@ -11,21 +11,6 @@ typedef long double ld;
 #define vec vector<ll> v
 #define i(a,b,c) ll a,b,c; cin>>a>>b>>c;
 #define nl '\n'
-int l,r,i,rem;
-int num;
-void ans(int,int){
-	num=0;
-	while(l<=r){
-		i=l;
-		while(l>0){
-			l%=10;
-			rem=l;
-			if(rem==2 || rem==3 ||rem==9) num++;
-		}
-		i++;
-		cout<<num<<nl;
-	}
-}
 int main()
 {
 	ios_base::sync_with_stdio(false);
@@ -35,8 +20,20 @@ int main()
 	cin>>T;
 	while (T--)
 	{
-		cin>>l>>r;
-		ans(l,r);
+		int n,k;cin>>n>>k;
+		if(k==0)
+		{
+			if(n%4==0) cout<<"Off"<<nl;
+			else if(n%4!=0) cout<<"On"<<nl;
+			else if(n==0) cout<<"Off"<<nl;
+		}
+		else if(k==1)
+		{
+			if(n==0) cout<<"On"<<nl;
+			else if(n%4==0) cout<<"On"<<nl;
+			else if((n!=0) && (n%4!=0)) cout<<"Ambiguous"<<nl;
+		}
+
 	}
 	return 0;
 }

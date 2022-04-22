@@ -6,10 +6,14 @@ typedef long double ld;
 #define mp make_pair
 #define pb push_back
 #define pob pop_back
-#define f(n) for(int i=0;i<n;i++)
-#define in(n,a) for(int i=0;i<n;i++) cin>>a[i];
+#define f(n) for (int i = 0; i < n; i++)
+#define in(n, a)                \
+	for (int i = 0; i < n; i++) \
+		cin >> a[i];
 #define vec vector<ll> v
-#define i(a,b,c) ll a,b,c; cin>>a>>b>>c;
+#define i(a, b, c) \
+	ll a, b, c;    \
+	cin >> a >> b >> c;
 #define nl '\n'
 int main()
 {
@@ -17,18 +21,20 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 	int T;
-	cin>>T;
+	cin >> T;
 	while (T--)
 	{
-		int k,ans=0;cin>>k;
-		int s=k;
-		while(k>0){
-			ans+=3;
-			k--;
-			ans-=1;
+		int x;
+		cin >> x;
+		if (x % 5 == 0)
+		{
+			if (x % 10 == 0)
+				cout << 0 << nl;
+			else
+				cout << 1 << nl;
 		}
-		//cout<<ans-(s/2)<<nl;
-		cout<<ans<<nl;
+		else
+			cout << "-1" << nl;
 	}
 	return 0;
 }

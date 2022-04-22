@@ -20,13 +20,10 @@ int main()
 	cin>>T;
 	while (T--)
 	{
-		ll x;cin>>x;
-		ll div10=0,div5=0;
-		div10=x/10;
-		if(x%10>=5) {div5=(x%10)%5;
-		cout<<div10+div5<<nl;
-		}
-		else cout<<"-1"<<nl;
+		float b;cin>>b;
+		int n=(b/2)-1;
+		int ans= (n*(n+1))/2;
+		cout<<ans<<nl;
 	}
 	return 0;
 }
