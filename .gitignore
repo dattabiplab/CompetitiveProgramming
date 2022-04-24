@@ -1,15 +1,16 @@
 .cph/
 .vscode/
-./cp.code-workspace/*
-./cp.sublime-workspace/*
+/*cp.code-workspace
+/*cp.sublime-workspace
 ./inputf.in/*
 ./outputf.in/*
 ./p2.cpp/*
 ./test.cpp/*
 ./trial.cpp/*
-./OpenWithSublimeText3.bat/*
-./CODECHEF Questions.docx/*
+/*OpenWithSublimeText3.bat
+/*CODECHEF Questions.docx
 LeetCode/
 /*.in
 /*.cpp
+/*.html
 
