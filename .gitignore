@@ -10,3 +10,6 @@
 ./OpenWithSublimeText3.bat/*
 ./CODECHEF Questions.docx/*
 LeetCode/
+/*.in
+/*.cpp
+
